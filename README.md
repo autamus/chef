@@ -3,7 +3,7 @@
 Chef is an autamus container recipe writer. Using package from [autamus.io](autamus.io),
 we can generate a Dockerfile with any set of packages!
 
-![img/chef.png](img/chef.png)
+![img/chef-stash.png](img/chef-stash.png)
 
 ## Usage
 
