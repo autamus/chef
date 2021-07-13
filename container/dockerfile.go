@@ -27,7 +27,10 @@ func Dockerfile(packages []string, validate bool) string {
 	// Ensure that each package exists as we add
 	for _, pkg := range packages {
 
-		name := strings.Split(pkg, ":")[0]
+		parts := strings.Split(pkg, ":")
+		name := parts[0]
+		version := strings.ReplaceAll(parts[1], ".", "-")
+		name = name + "-" + version
 
 		if validate {
 			if packageExists(pkg) {
